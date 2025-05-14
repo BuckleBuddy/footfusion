@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foot Pain Survey Results</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .chart-container {
+            margin-bottom: 60px;
+            max-width: 700px;
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+        h1, h2 {
+            color: #000000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Foot Pain Survey Results</h1>
+    
+    <div class="chart-container">
+        <h2>How often do you experience foot pain or discomfort?</h2>
+        <canvas id="chart1"></canvas>
+        <script>
+            const ctx1 = document.getElementById("chart1").getContext("2d");
+            new Chart(ctx1, {
+                type: "pie",
+                data: {
+                    labels: ["Daily", "Monthy", "Never", "Randomly ", "Rarely", "Weekly"],
+                    datasets: [{
+                        data: [9, 2, 1, 1, 2, 8],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="chart-container">
+        <h2>Would you be willing to try a shoe that uses red light therapy to help manage foot pain?</h2>
+        <canvas id="chart2"></canvas>
+        <script>
+            const ctx2 = document.getElementById("chart2").getContext("2d");
+            new Chart(ctx2, {
+                type: "pie",
+                data: {
+                    labels: ["Maybe, depending on effectiveness", "No", "Yes"],
+                    datasets: [{
+                        data: [3, 2, 18],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="chart-container">
+        <h2>On a scale of 0 to 10, how would you rate your foot pain?</h2>
+        <canvas id="chart3"></canvas>
+        <script>
+            const ctx3 = document.getElementById("chart3").getContext("2d");
+            new Chart(ctx3, {
+                type: "pie",
+                data: {
+                    labels: [2, 3, 4, 5, 6, 7, 10],
+                    datasets: [{
+                        data: [2, 9, 4, 3, 3, 1, 1],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="chart-container">
+        <h2>How important is it for you that a shoe designed for foot pain management also looks fashionable or stylish?</h2>
+        <canvas id="chart4"></canvas>
+        <script>
+            const ctx4 = document.getElementById("chart4").getContext("2d");
+            new Chart(ctx4, {
+                type: "pie",
+                data: {
+                    labels: ["Not important", "Somewhat important", "Very important"],
+                    datasets: [{
+                        data: [5, 7, 11],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="chart-container">
+        <h2>How much would you be willing to spend on a pair of shoes that offer laser therapy for foot pain relief?</h2>
+        <canvas id="chart5"></canvas>
+        <script>
+            const ctx5 = document.getElementById("chart5").getContext("2d");
+            new Chart(ctx5, {
+                type: "pie",
+                data: {
+                    labels: ["$100-$150", "$150-$200", "$50-$100", "Over $200"],
+                    datasets: [{
+                        data: [10, 1, 10, 1],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="chart-container">
+        <h2>How often do you wear shoes specifically designed for comfort and pain relief?</h2>
+        <canvas id="chart6"></canvas>
+        <script>
+            const ctx6 = document.getElementById("chart6").getContext("2d");
+            new Chart(ctx6, {
+                type: "pie",
+                data: {
+                    labels: ["Always", "Never", "Occasionally", "Often", "Rarely"],
+                    datasets: [{
+                        data: [2, 8, 4, 7, 2],
+                        backgroundColor: [
+                            '#b00020', '#d32f2f', '#f44336',
+                            '#e57373', '#ff8a80', '#ffcdd2'
+                        ],
+                        borderColor: '#ffffff',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#000000'
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+    </div>
+    
+</body>
+</html>
